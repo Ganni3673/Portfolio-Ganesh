@@ -1,0 +1,31 @@
+.projects {
+  padding: 100px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 5px solid #007bff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.impact {
+  color: green;
+  font-weight: bold;
+}

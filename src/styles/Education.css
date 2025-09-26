@@ -1,0 +1,55 @@
+.education {
+  padding: 80px 20px;
+  background: #fff;   /* or a light shade */
+  text-align: center;
+}
+
+.education h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Additional styles for education card */
+.edu-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Header with logo + details side by side */
+.edu-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Logo size */
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* University name & year info */
+.edu-info h3 {
+  font-size: 22px;
+  margin: 0 0 5px 0;
+}
+.edu-info p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* List inside card (reuse card ul styling) */
+.edu-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.edu-card ul li {
+  margin-bottom: 8px;
+}

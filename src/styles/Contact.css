@@ -1,47 +1,63 @@
+/* Contact.css */
 .contact {
-  padding: 80px 20px;
+  padding: 100px 20px 50px;
+  background: var(--secondary-color);
   text-align: center;
-  background: #f9f9f9;
+  color: #fff;
 }
 
 .contact h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: #222;
+  font-size: 36px;
+  margin-bottom: 50px;
 }
 
 .contact-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
 }
 
 .contact-item {
+  background: var(--glass-bg);
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  font-size: 18px;
-  color: #333;
+  gap: 15px;
+  min-width: 200px;
+  transition: var(--transition);
 }
 
-.contact-item a {
-  color: #007bff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.contact-item a:hover {
-  color: #00c6ff;
-  text-decoration: underline;
-}
-
-.icon {
-  font-size: 22px;
-  color: #00c6ff;
+.contact-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
 }
 
 .contact-item .icon {
-  font-size: 25px;
-  color: #c6ff00;
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.contact-item a,
+.contact-item span {
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--primary-color);
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 14px;
 }

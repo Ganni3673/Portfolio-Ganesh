@@ -2,36 +2,54 @@ import React from "react";
 import "./../styles/Projects.css";
 
 const Projects = () => {
+  const projects = [
+    {
+      title: "E-Commerce Backend Platform",
+      tech: ["Java", "Spring Boot", "Hibernate", "RabbitMQ", "MySQL", "React.js"],
+      desc: "Developed cart, checkout, and wishlist modules with payment integration.",
+      impact: "Reduced checkout time by 15%."
+    },
+    {
+      title: "Inventory & Shipping Microservices",
+      tech: ["Spring Boot", "REST APIs", "PostgreSQL"],
+      desc: "Built APIs for real-time inventory & shipping updates.",
+      impact: "Improved data consistency across systems."
+    },
+    {
+      title: "Cloud Deployment Automation",
+      tech: ["Azure ARM", "Jenkins", "Maven"],
+      desc: "Automated Azure VM deployments with ARM templates.",
+      impact: "Deployment speed increased by 40%."
+    },
+    {
+      title: "Personalized Recommendation System",
+      tech: ["Java", "Spring Boot", "React.js", "SQL"],
+      desc: "Developed recommendation system for eCommerce.",
+      impact: "Increased customer engagement & sales."
+    }
+  ];
+
   return (
     <section id="projects" className="projects">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
 
-      <div className="project-card">
-        <h3>E-Commerce Backend Platform</h3>
-        <p><b>Tech:</b> Java, Spring Boot, Hibernate, RabbitMQ, MySQL, React.js</p>
-        <p>Developed cart, checkout, and wishlist modules with payment integration.</p>
-        <p className="impact">🚀 Reduced checkout time by 15%.</p>
-      </div>
-
-      <div className="project-card">
-        <h3>Inventory & Shipping Microservices</h3>
-        <p><b>Tech:</b> Spring Boot, REST APIs, PostgreSQL</p>
-        <p>Built APIs for real-time inventory & shipping updates.</p>
-        <p className="impact">🚀 Improved data consistency across systems.</p>
-      </div>
-
-      <div className="project-card">
-        <h3>Cloud Deployment Automation</h3>
-        <p><b>Tech:</b> Azure ARM Templates, Jenkins, Maven</p>
-        <p>Automated Azure VM deployments with ARM templates.</p>
-        <p className="impact">🚀 Deployment speed increased by 40%.</p>
-      </div>
-
-      <div className="project-card">
-        <h3>Personalized Recommendation System</h3>
-        <p><b>Tech:</b> Java, Spring Boot, React.js, SQL</p>
-        <p>Developed recommendation system for eCommerce.</p>
-        <p className="impact">🚀 Increased customer engagement & sales.</p>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h3>{project.title}</h3>
+            <div className="tech-stack">
+              {project.tech.map((t, i) => (
+                <span key={i} className="tech-tag">{t}</span>
+              ))}
+            </div>
+            <p className="project-body">
+              {project.desc}
+            </p>
+            <div className="impact">
+              🚀 {project.impact}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

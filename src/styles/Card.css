@@ -1,41 +1,52 @@
+/* Card.css */
 .card {
-  background: #f9f9f9;        
-  border-left: 5px solid #007bff; 
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  color: #fff;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .card p {
   margin: 5px 0;
-  color: #555;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .card ul {
-  margin: 10px 0 0 15px;
   padding: 0;
+  margin: 10px 0 0;
 }
 
-.card ul li {
-  margin-bottom: 8px;
-  color: #333;
+.card li {
   list-style: none;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.card ul li::before {
-  content: "✅ ";
-  color: green;
-  margin-right: 6px;
+.card li::before {
+  content: '⚡';
+  font-size: 12px;
+  color: var(--accent-color);
 }

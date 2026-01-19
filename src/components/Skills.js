@@ -1,40 +1,42 @@
 import React from "react";
 import "./../styles/Skills.css";
-import "./../styles/Card.css";  // ✅ reuse the card style
+import "./../styles/Card.css";
 
 const Skills = () => {
   return (
     <section id="skills" className="skills">
-      <h2>Skills</h2>
+      <h2>Technical Skills</h2>
 
-      <div className="card">
-        <h3>💻 Backend</h3>
-        <p>Core Java, Spring Boot, Hibernate, Microservices</p>
-      </div>
+      <div className="skills-grid">
+        <div className="card">
+          <h3>💻 Backend</h3>
+          <p>Core Java, Spring Boot, Hibernate, Microservices, REST APIs</p>
+        </div>
 
-      <div className="card">
-        <h3>🌐 Frontend</h3>
-        <p>React.js, HTML5, CSS3, JavaScript, Bootstrap</p>
-      </div>
+        <div className="card">
+          <h3>🌐 Frontend</h3>
+          <p>React.js, JSON, HTML5, CSS3, JavaScript</p>
+        </div>
 
-      <div className="card">
-        <h3>🗄️ Databases</h3>
-        <p>Oracle, SQL, MySQL, PostgreSQL</p>
-      </div>
+        <div className="card">
+          <h3>🗄️ Databases</h3>
+          <p>MySQL, PostgreSQL, Oracle SQL</p>
+        </div>
 
-      <div className="card">
-        <h3>☁️ Cloud</h3>
-        <p>Amazon Web Services (EC2, S3, Lambda, RDS, IAM)</p>
-      </div>
+        <div className="card">
+          <h3>☁️ Cloud & DevOps</h3>
+          <p>AWS (EC2, S3), Azure, Docker, Jenkins</p>
+        </div>
 
-      <div className="card">
-        <h3>🛠️ Tools</h3>
-        <p>Git, Maven, Gradle, Jenkins, Jira, JUnit</p>
-      </div>
+        <div className="card">
+          <h3>🛠️ Tools</h3>
+          <p>Git, Maven, Gradle, Jira, Postman, Eclipse/IntelliJ</p>
+        </div>
 
-      <div className="card">
-        <h3>⚡ Others</h3>
-        <p>CI/CD pipelines, RabbitMQ, Agile Scrum</p>
+        <div className="card">
+          <h3>⚡ Best Practices</h3>
+          <p>Agile Scrum, CI/CD, Unit Testing (JUnit), Clean Code</p>
+        </div>
       </div>
     </section>
   );

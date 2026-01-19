@@ -5,7 +5,7 @@ import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
 const Contact = () => {
   return (
     <section id="contact" className="contact">
-      <h2>Contact Me</h2>
+      <h2>Get In Touch</h2>
       <div className="contact-container">
 
         <div className="contact-item">
@@ -23,25 +23,30 @@ const Contact = () => {
         <div className="contact-item">
           <FaGithub className="icon" />
           <a
-            href="https://github.com/ganeshjadhav"
+            href="https://github.com/Ganni3673"
             target="_blank"
             rel="noreferrer"
           >
-            github.com/ganeshjadhav
+            GitHub
           </a>
         </div>
 
         <div className="contact-item">
           <FaLinkedin className="icon" />
           <a
-            href="https://www.linkedin.com/in/ganesh-jadhav-810051210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            href="https://www.linkedin.com/in/ganesh-jadhav-810051210"
             target="_blank"
             rel="noreferrer"
           >
-            linkedin.com/in/ganeshjadhav
+            LinkedIn
           </a>
         </div>
       </div>
+
+      <footer>
+        <p>© {new Date().getFullYear()} Ganesh Jadhav. All rights reserved.</p>
+        <p>Built with React.js & Modern CSS</p>
+      </footer>
     </section>
   );
 };

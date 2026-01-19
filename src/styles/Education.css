@@ -1,55 +1,72 @@
+/* Education.css */
 .education {
-  padding: 80px 20px;
-  background: #fff;   /* or a light shade */
+  padding: 100px 20px;
+  background: var(--secondary-color);
   text-align: center;
 }
 
 .education h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #222;
+  font-size: 36px;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
 }
 
-/* Additional styles for education card */
-.edu-card {
+.education h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.education-container {
   max-width: 800px;
   margin: 0 auto;
-  text-align: left;
 }
 
-/* Header with logo + details side by side */
 .edu-header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 20px;
 }
 
-/* Logo size */
 .edu-logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
 }
 
-/* University name & year info */
+.edu-info {
+  text-align: left;
+}
+
 .edu-info h3 {
-  font-size: 22px;
-  margin: 0 0 5px 0;
-}
-.edu-info p {
-  margin: 2px 0;
-  color: #555;
-  font-size: 16px;
+  font-size: 20px;
+  margin: 0 0 5px;
+  color: var(--primary-color);
 }
 
-/* List inside card (reuse card ul styling) */
-.edu-card ul {
-  margin-top: 15px;
-  padding-left: 20px;
+.edu-info p {
+  color: var(--text-secondary);
+  font-size: 15px;
 }
-.edu-card ul li {
-  margin-bottom: 8px;
+
+@media (max-width: 768px) {
+  .edu-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edu-info {
+    text-align: center;
+  }
 }

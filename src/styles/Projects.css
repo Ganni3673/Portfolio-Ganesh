@@ -1,31 +1,96 @@
+/* Projects.css */
 .projects {
   padding: 100px 20px;
-  background: #f8f9fa;
+  background: var(--secondary-color);
   text-align: center;
 }
 
 .projects h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.projects h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-left: 5px solid #007bff;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 15px;
   text-align: left;
-  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
 }
 
 .project-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.project-title-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .impact {
-  color: green;
-  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

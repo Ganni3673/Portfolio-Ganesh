@@ -1,32 +1,38 @@
+/* Skills.css */
 .skills {
-  padding: 80px 20px;
+  padding: 100px 20px;
+  background: var(--bg-color);
   text-align: center;
-  background: #f9f9f9;
+  position: relative;
 }
 
 .skills h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #222;
+  font-size: 36px;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
 }
 
-/* Make the cards align nicely in grid */
-.skills .card {
-  max-width: 600px;
-  margin: 0 auto 20px;
-  text-align: left;
+.skills h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .skills .card h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.skills .card p {
-  color: #555;
-  font-size: 16px;
+  justify-content: center;
 }

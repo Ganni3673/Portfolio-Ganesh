@@ -12,7 +12,7 @@ const Education = () => {
       <h2>Education</h2>
 
       <div className="education-container">
-        <div className="card">
+        <div className="card" data-aos="fade-up">
           <div className="edu-header">
             <img src={logo} alt="University Logo" className="edu-logo" />
             <div className="edu-info">
@@ -28,7 +28,7 @@ const Education = () => {
           </ul>
         </div>
 
-        <div className="card" style={{ marginTop: "30px" }}>
+        <div className="card" style={{ marginTop: "30px" }} data-aos="fade-up" data-aos-delay="100">
           <div className="edu-header">
             {/* Using same logo or maybe generic one if specific one not available. I'll use the same one for visual consistency or hide it */}
             <div className="edu-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "#ddd", color: "#333", fontSize: "24px", fontWeight: "bold" }}>V</div>

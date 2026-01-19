@@ -31,11 +31,11 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <h2>Featured Projects</h2>
+      <h2 data-aos="fade-down">Featured Projects</h2>
 
       <div className="project-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className="project-card" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
             <h3>{project.title}</h3>
             <div className="tech-stack">
               {project.tech.map((t, i) => (

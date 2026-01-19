@@ -26,7 +26,7 @@ const Certifications = () => {
       <h2>Certifications & Awards</h2>
       <div className="cert-list">
         {certs.map((cert, index) => (
-          <div className="cert-card" key={index}>
+          <div className="cert-card" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
             <div className="cert-icon">{cert.icon}</div>
             <div>
               <h3>{cert.title}</h3>

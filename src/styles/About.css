@@ -66,11 +66,13 @@
   display: flex;
   align-items: center;
   color: #ffffff;
+  /* Requested: li heading make it white */
   gap: 10px;
   transition: var(--transition);
 }
 
 .highlights li:hover {
-  background: rgba(23, 201, 55, 0.1);
+  background: rgba(7, 176, 89, 0.1);
+  /* Updated to match user config exactly */
   transform: translateX(5px);
 }

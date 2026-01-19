@@ -8,30 +8,30 @@ const Contact = () => {
       <h2>Get In Touch</h2>
       <div className="contact-container">
 
-        <div className="contact-item">
+        <div className="contact-item" data-aos="fade-up">
           <FaEnvelope className="icon" />
           <a href="mailto:ganeshjadhav96111@gmail.com">
             ganeshjadhav96111@gmail.com
           </a>
         </div>
 
-        <div className="contact-item">
+        <div className="contact-item" data-aos="fade-up" data-aos-delay="100">
           <FaPhone className="icon" />
           <span>+91 6361116034</span>
         </div>
 
-        <div className="contact-item">
+        <div className="contact-item" data-aos="fade-up" data-aos-delay="200">
           <FaGithub className="icon" />
           <a
             href="https://github.com/Ganni3673"
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            github.com/Ganni3673
           </a>
         </div>
 
-        <div className="contact-item">
+        <div className="contact-item" data-aos="fade-up" data-aos-delay="300">
           <FaLinkedin className="icon" />
           <a
             href="https://www.linkedin.com/in/ganesh-jadhav-810051210"

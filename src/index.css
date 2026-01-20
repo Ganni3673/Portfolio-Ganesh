@@ -37,40 +37,39 @@ body {
 }
 
 /* Sections: Natural flow with good spacing */
-/* Sections: Each section is a full "page" */
+/* Global Section Styling - Unified "Home Page" Look */
 section {
   min-height: 100vh;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  /* Ensure full width for background */
   padding: 80px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  /* The "Home Page" Gradient */
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.1), transparent 40%);
+  color: #fff;
 }
 
-/* Zebra Striping for distinct pages */
-section:nth-of-type(even) {
-  background: var(--secondary-color);
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
-  /* Expand background to full width, breaking out of max-width container visually if needed.
-     Actually, since max-width is on SECTION, background won't span full width.
-     Fix: Set background on the SECTION but make SECTION full width? 
-     The SECTION max-width above prevents full width background. 
-     CORRECTION: Remove max-width from section, put it on inner container or let it be full width.
-     I'll remove max-width from section to allow full background.
-  */
+/* Inner container for content width */
+section>* {
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 100%;
-  /* Override */
+  position: relative;
+  z-index: 2;
 }
 
-section:nth-of-type(odd) {
-  width: 100%;
-  max-width: 100%;
-}
+/* Optional: Add the mesh effect to each section if desired, 
+   but for performance we might skip the animation on every single section unless requested.
+   The user said "make it same", so I will apply the gradient first. 
+*/
 
 /* Inner container for content width */
 section>* {
@@ -81,6 +80,9 @@ section>* {
 
 section#home {
   padding-top: 0;
+  background: #ffffff;
+  color: #1e293b;
+  /* Dark text for contrast */
 }
 
 h1,

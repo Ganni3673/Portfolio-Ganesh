@@ -1,49 +1,15 @@
 /* Hero.css */
 .hero {
-  min-height: 100vh;
-  width: 100%;
-  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.1), transparent 40%);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 100px 20px 0;
-  /* Account for fixed navbar */
+  /* Dimensions & Layout inherits from global section */
   position: relative;
   overflow: hidden;
+  /* Background is now White via index.css #home rule */
 }
 
-/* Subtle animated background mesh */
+/* Background gradient mesh (Subtler for white theme) */
 .hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.5;
-  pointer-events: none;
-  animation: moveBackground 100s linear infinite;
-}
-
-@keyframes moveBackground {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(50px, 50px);
-  }
-}
-
-.hero::after {
-  display: none;
-  /* Remove old blur blob to clean up */
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+  opacity: 0.8;
 }
 
 .hero-content {
@@ -57,18 +23,18 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 4px solid transparent;
-  background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+  border: 4px solid #fff;
+  background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(135deg, var(--primary-color), var(--accent-color)) border-box;
   margin-bottom: 30px;
   object-fit: cover;
-  box-shadow: 0 0 50px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
   transition: var(--transition);
 }
 
 .profile-img:hover {
   transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 0 70px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 15px 50px rgba(99, 102, 241, 0.25);
 }
 
 /* Typography */
@@ -78,10 +44,11 @@
   margin-bottom: 20px;
   line-height: 1.1;
   letter-spacing: -2px;
-  background: linear-gradient(to bottom, #fff, #94a3b8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1e293b;
+  /* Dark Slate */
+  background: none;
+  /* Remove white gradient */
+  -webkit-text-fill-color: #1e293b;
 }
 
 .highlight {
@@ -95,17 +62,18 @@
   font-size: 28px;
   color: var(--primary-color);
   margin-bottom: 25px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.5px;
 }
 
 .tagline {
   font-size: 20px;
-  color: var(--text-secondary);
+  color: #64748b;
+  /* Slate 500 */
   max-width: 650px;
   margin: 0 auto 50px;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Buttons */
@@ -117,7 +85,10 @@
 }
 
 .btn {
-  padding: 16px 40px;
+  padding: 16px 0;
+  /* from user edit */
+  min-width: 220px;
+  /* from user edit */
   border-radius: 50px;
   font-weight: 600;
   font-size: 16px;
@@ -125,30 +96,33 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .primary-btn {
   background: var(--primary-color);
   color: #fff;
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.25);
 }
 
 .primary-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }
 
 .secondary-btn {
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(5px);
+  background: transparent;
+  color: #1e293b;
+  border: 2px solid #e2e8f0;
+  /* Light gray border */
 }
 
 .secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
   transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
 }
 
 /* Responsive */
@@ -195,13 +169,4 @@
   border: none;
   transform: translateY(-5px);
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
-}
-
-/* Make hero buttons same width */
-.hero .btn {
-  min-width: 220px;
-  /* same width for both */
-  text-align: center;
-  padding: 16px 0;
-  /* consistent height */
 }

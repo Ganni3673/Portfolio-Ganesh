@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/Portfolio-Ganesh/static/css/main.49dbb30d.css",
-    "main.js": "/Portfolio-Ganesh/static/js/main.359bf898.js",
+    "main.js": "/Portfolio-Ganesh/static/js/main.81489acd.js",
     "static/js/453.ad7768ec.chunk.js": "/Portfolio-Ganesh/static/js/453.ad7768ec.chunk.js",
+    "static/media/profile.jpg": "/Portfolio-Ganesh/static/media/profile.c1044df453b407f2648f.jpg",
     "static/media/sharnbasva-logo.png": "/Portfolio-Ganesh/static/media/sharnbasva-logo.d0b688fa48da1804d0ef.png",
     "index.html": "/Portfolio-Ganesh/index.html",
     "main.49dbb30d.css.map": "/Portfolio-Ganesh/static/css/main.49dbb30d.css.map",
-    "main.359bf898.js.map": "/Portfolio-Ganesh/static/js/main.359bf898.js.map",
+    "main.81489acd.js.map": "/Portfolio-Ganesh/static/js/main.81489acd.js.map",
     "453.ad7768ec.chunk.js.map": "/Portfolio-Ganesh/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49dbb30d.css",
-    "static/js/main.359bf898.js"
+    "static/js/main.81489acd.js"
   ]
 }

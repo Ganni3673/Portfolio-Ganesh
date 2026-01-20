@@ -28,7 +28,7 @@ const Education = () => {
           </ul>
         </div>
 
-        <div className="card" style={{ marginTop: "30px" }} data-aos="fade-up" data-aos-delay="100">
+        <div className="card" data-aos="fade-up" data-aos-delay="100">
           <div className="edu-header">
             {/* Using same logo or maybe generic one if specific one not available. I'll use the same one for visual consistency or hide it */}
             <div className="edu-logo" style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "#ddd", color: "#333", fontSize: "24px", fontWeight: "bold" }}>V</div>
@@ -41,6 +41,7 @@ const Education = () => {
           <ul>
             <li>Core programming foundations in C, C++, and Java</li>
             <li>Web development fundamentals</li>
+            <li>Academics: OOPs, web Technologies, Software Engineer</li>
           </ul>
         </div>
       </div>

@@ -2,15 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --bg-color: #0f172a;
-  --text-color: #e2e8f0;
+  --bg-color: #030712;
+  /* Very dark gray/black */
+  --text-color: #f8fafc;
+  /* Almost white */
   --text-secondary: #94a3b8;
-  --primary-color: #38bdf8;
-  --secondary-color: #1e293b;
-  --accent-color: #0ea5e9;
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --transition: all 0.3s ease-in-out;
+  /* Slate 400 */
+  --primary-color: #6366f1;
+  /* Indigo 500 */
+  --secondary-color: #111827;
+  /* Gray 900 - card bg */
+  --accent-color: #818cf8;
+  /* Indigo 400 */
+  --glass-bg: rgba(17, 24, 39, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +34,53 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+/* Sections: Natural flow with good spacing */
+/* Sections: Each section is a full "page" */
+section {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Zebra Striping for distinct pages */
+section:nth-of-type(even) {
+  background: var(--secondary-color);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  /* Expand background to full width, breaking out of max-width container visually if needed.
+     Actually, since max-width is on SECTION, background won't span full width.
+     Fix: Set background on the SECTION but make SECTION full width? 
+     The SECTION max-width above prevents full width background. 
+     CORRECTION: Remove max-width from section, put it on inner container or let it be full width.
+     I'll remove max-width from section to allow full background.
+  */
+  width: 100%;
+  max-width: 100%;
+  /* Override */
+}
+
+section:nth-of-type(odd) {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Inner container for content width */
+section>* {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section#home {
+  padding-top: 0;
 }
 
 h1,

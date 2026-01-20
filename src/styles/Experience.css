@@ -1,27 +1,20 @@
 /* Experience.css */
 .experience {
-  padding: 100px 20px;
-  background: var(--secondary-color);
+  /* Padding handled by global section rule */
+  /* Background handled by global section rule */
   text-align: center;
+  position: relative;
 }
 
 .experience h2 {
-  font-size: 36px;
-  margin-bottom: 60px;
-  position: relative;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 80px;
+  background: linear-gradient(to right, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: inline-block;
-}
-
-.experience h2::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: var(--primary-color);
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
 }
 
 .timeline {
@@ -38,42 +31,52 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: var(--glass-border);
+  background: linear-gradient(to bottom, var(--primary-color), var(--bg-color));
+  opacity: 0.3;
 }
 
 .exp-card {
-  background: var(--bg-color);
-  padding: 30px;
-  margin-left: 30px;
-  margin-bottom: 40px;
-  border-radius: 15px;
+  background: var(--secondary-color);
+  padding: 35px;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  border-radius: 20px;
   border: 1px solid var(--glass-border);
   text-align: left;
   position: relative;
   transition: var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 .exp-card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Dot on timeline */
 .exp-card::before {
   content: '';
   position: absolute;
-  top: 30px;
-  left: -36px;
-  width: 14px;
-  height: 14px;
-  background: var(--primary-color);
+  top: 35px;
+  left: -47px;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-color);
   border-radius: 50%;
-  border: 3px solid var(--secondary-color);
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  transition: var(--transition);
+}
+
+.exp-card:hover::before {
+  background: var(--primary-color);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
 }
 
 .exp-card h3 {
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 700;
   color: #fff;
   margin-bottom: 5px;
 }
@@ -81,44 +84,49 @@
 .role {
   color: var(--primary-color);
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: block;
+  font-size: 16px;
 }
 
 .duration {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 10px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
 }
 
 .exp-card ul {
-  padding-left: 20px;
+  padding-left: 0;
   list-style-type: none;
 }
 
 .exp-card li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   position: relative;
   color: var(--text-color);
+  padding-left: 25px;
+  line-height: 1.6;
 }
 
 .exp-card li::before {
   content: '▹';
   position: absolute;
-  left: -20px;
+  left: 0;
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .timeline::before {
     left: -10px;
-    /* Hide line or move it */
     display: none;
+    /* Hide timeline for simpler mobile view */
   }
 
   .exp-card {
